@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="" content="">
+    <title>Hot New Restaurants</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Josefin+Slab" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav role="navigation">
+        <!-- <a href="index.html">
+                    <img src="images/home_link.png" class="icon-img" alt="home-link"> -->
+    </nav>
+
+    <header role="banner">
+        <div class="col-12 title">Find New
+            <span class="cursive-font">Trendy</span> Restaurants Near You</div>
+    </header>
+
+    <main role="main">
+        <div class="row">
+            <div class="col-12">
+                <form role="form" class="js-search-form">
+                    <fieldset>
+                        <legend>Search by ZIP Code</legend>
+                        <label for="js-search-location"></label>
+                        <input type="text" pattern="[0-9]{5}" class="js-search-location" placeholder="Enter Zip Code" required>
+                        <button id="js-search-button" type="submit">Search</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="results-pane">
+            <h2 class="js-results-title"></h2>
+            <div class="js-search-results col-12"></div>
+        </div>
+
+           
+
+
+
+    
+               
+        
+            
+           
+        </main>
+    
+    
+        
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+    </html>
