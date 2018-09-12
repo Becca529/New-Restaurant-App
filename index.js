@@ -42,10 +42,13 @@ function displaySearchData(data) {
 //Renders returned search items
 function renderResult(result) {
   let categoriesArray = result.categories.map((item, index) => item.title);
+  let price = checkIfMissing(result);
+  let phoneNumber = checkIfEmpty(result);
+
 
   return `
-      <div class = "col-4 result">
-        <div class= "result-image center-div">
+      <div class = "result   col-4">
+        <div class= "result-image">
           <img class= "rest-image" src="${result.image_url}">
         </div>
 
@@ -55,10 +58,10 @@ function renderResult(result) {
             <ul class = "rest-rating">
               <li class="yelp-review-link">Yelp Review: <a target="_blank" href="${result.url}">${result.rating}/5</a></li>
               <li># Reviewers: ${result.review_count}</li>
-              <li>${result.price}</li>
+              <li>Price: ${price}</li>
             </ul>
             <p class="address"> ${result.location.display_address}</p>
-            <p class="phone-number">${result.display_phone}</p>
+            <p class="phone-number">${phoneNumber}</p>
             <div class="results-links">
               <a href="https://www.google.com/maps/dir/?api=1&destination=${result.location.display_address}&travelmode=driving" class="link-btn" target="_blank">Get Driving Directions<span class="arrow">></span></a>
               <a href="https://m.uber.com/ul/?action=setPickup&client_id=fr5WnHzC0LfJYA4NzW8bwH_eS42b1oEx&pickup=my_location&dropoff[formatted_address]=${result.location.display_address}&dropoff[latitude]=${result.coordinates.latitude}&dropoff[longitude]=${result.coordinates.longitude}" class="link-btn" target="_blank">Get an Uber<span class="arrow">></span></a>
@@ -67,6 +70,21 @@ function renderResult(result) {
       </div>
     `
 }
+
+function checkIfMissing (result) {
+ if (result.hasOwnProperty("price") != true) {
+  return "N/a";
+ }
+ else return result.price;
+}
+
+function checkIfEmpty (result) {
+  if (result.display_phone == "") {
+   return "Phone: N/a";
+  }
+  else return result.display_phone
+ }
+
 
 // when the page loads call submitButton
 $(submitButton); 

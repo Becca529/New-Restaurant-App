@@ -16,7 +16,6 @@ nav {
 .icon-img {
   height: 25px;
   margin: 20px;
-  float: left;
   color: whitesmoke;
 
 }
@@ -91,9 +90,9 @@ li {
 .results-pane { 
   background:  rgba(0, 0, 0, 0.5); 
   margin-top: 20px;
-  text-align:center;
-  width:100%;
+  text-align: center;
 }
+ 
 
 .js-results-title {
   padding: 10px;
@@ -106,13 +105,13 @@ li {
 .result{
   border: 3px solid #E5E5E5;
   height: 600px;
-  width: 400px;
+  max-width: 450px;
   color: #3F3131;
   background: rgba(255, 255, 255, 0.9);
-  display: inline-block;
   vertical-align: top; 
   padding: 10px;
-  margin: 5px;
+  margin: auto;
+  
 }
 
 .rest-image{
