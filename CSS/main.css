@@ -110,6 +110,7 @@ li {
   color: #3F3131;
   background: rgba(255, 255, 255, 0.9);
   display: inline-block;
+  vertical-align: top; 
   padding: 10px;
   margin: 5px;
 }
