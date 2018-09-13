@@ -30,7 +30,7 @@
     <main role="main">
         <div class="row">
             <div class="col-12">
-                <form role="form" class="js-search-form">
+                <form role="form" action="#" class="js-search-form">
                     <fieldset>
                         <legend>Search by ZIP Code</legend>
                         <label for="js-search-location"></label>
@@ -40,7 +40,7 @@
                 </form>
             </div>
         </div>
-        <div class="results-pane col-12">
+        <div class="results-pane col-12 aria-live="assertive" hidden">
             <h2 class="js-results-title"></h2>
             <div class="js-search-results"></div>
          </div>

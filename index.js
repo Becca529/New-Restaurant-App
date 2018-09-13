@@ -36,6 +36,7 @@ function getDataFromApi(searchTerm, callback) {
 //Displays search results on page by calling renderResult() for each returned search item
 function displaySearchData(data) {
   const results = data.businesses.map((item, index) => renderResult(item));
+  $('.js-search-results').prop('hidden', false);
   $('.js-search-results').html(results);
 }
 
