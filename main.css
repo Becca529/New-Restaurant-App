@@ -93,13 +93,13 @@ li {
   text-align: center;
 }
  
-
 .js-results-title {
   padding: 10px;
 }
 
 .js-search-results{
   text-align: center;
+  display: flex;
 }
 
 .result{

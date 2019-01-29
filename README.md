@@ -1,10 +1,20 @@
-# New-Restaurant-App
+# TrendyEatz
 
-https://becca529.github.io/New-Restaurant-App/
+The Trendy Eatz app helps users find and view newly opened trendy restaurants near them by entering their zip code. Users will have an option to get Google Map driving directions to the restaurant or open up the Uber app (if installed on device) to request an Uber to the restaurant address.
 
-This app helps users find and view newly opened trendy restaurants near them by entering their zip code. Users will have an option to get Google Map driving directions to the restaurant or open up the Uber app (if installed on device) to request an uber to the restaurant address.
+[Live demo](https://becca529.github.io/New-Restaurant-App/)
 
-APIs Used: Yelp Find Business Search
-Technologies Used: HTML5/CSS3/Javascript/jQuery
+## Screenshot
+![Find New Trendy Restaurants Near You](screenshots/newidea.png "Find New Trendy Restaurants Near You")
 
-/Users/rebecca/Desktop/Screen Shot 2018-09-12 at 7.33.01 PM.png
+## Technologies used
+
+* Languages/modules:
+  * HTML
+  * CSS
+  * Javascript
+  * JQuery
+  
+* APIs Used:
+  * Yelp Find Business Search
+  
