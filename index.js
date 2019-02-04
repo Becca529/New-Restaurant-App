@@ -56,7 +56,7 @@ function renderResult(result) {
           <h2 class = "rest-name">${result.name}</h2>
         </div>
         <div class="rest-details">
-            <h3>${categoriesArray.join(", ")}</h3>
+            <h3 class="category">${categoriesArray.join(", ")}</h3>
             <ul class = "rest-rating">
               <li class="yelp-review-link">Yelp Review: <a target="_blank" href="${result.url}">${result.rating}/5</a></li>
               <li># Reviewers: ${result.review_count}</li>
