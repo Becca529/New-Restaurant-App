@@ -52,9 +52,10 @@ function renderResult(result) {
         <div class= "result-image">
           <img class= "rest-image" src="${result.image_url}">
         </div>
-
+        <div class="rest-name-container">
           <h2 class = "rest-name">${result.name}</h2>
-          <div class="rest-details">
+        </div>
+        <div class="rest-details">
             <h3>${categoriesArray.join(", ")}</h3>
             <ul class = "rest-rating">
               <li class="yelp-review-link">Yelp Review: <a target="_blank" href="${result.url}">${result.rating}/5</a></li>

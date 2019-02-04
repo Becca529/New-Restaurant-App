@@ -94,11 +94,13 @@ li {
 }
  
 .js-results-title {
-  padding: 10px;
+  padding: 5px;
 }
 
 .js-search-results{
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .result{
@@ -121,6 +123,10 @@ li {
 
 .rest-name{
   font-family: 'Fredericka the Great', cursive;
+}
+
+.rest-name-container {
+
 }
 
 .rest-details{
