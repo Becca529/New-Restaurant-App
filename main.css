@@ -56,7 +56,24 @@ main {
   color: whitesmoke;
   text-align: center;
 }
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #f3f3f3; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  padding-bottom: 50px;
   
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 button:hover {
 	background-color: #562CD4;
   cursor: pointer;
@@ -92,6 +109,7 @@ li {
 .results-pane { 
   background:  rgba(0, 0, 0, 0.5); 
   margin-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
 }
  
@@ -107,7 +125,7 @@ li {
 
 .result{
   border: 3px solid #E5E5E5;
-  height: 600px;
+  height: 612px;
   max-width: 450px;
   color: #3F3131;
   background: rgba(255, 255, 255, 0.9);

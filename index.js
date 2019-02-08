@@ -5,7 +5,7 @@ const apiKey = "L5ajM8gfrQwxwZ3bNzPL8C-x9gEJFLw0_1uyMy8uX8OYlrSgcf-ycpV8KJb2IHkZ
 
 //Captures zip code from text input and pass it to getDataFromAPI()
 function submitButton() {
-  pageNumber = 0;
+  $('.js-search-results').html("");
   $('.js-search-form').submit(event => {
     event.preventDefault();
     const queryTarget = $(event.currentTarget).find('.js-search-location');
@@ -18,12 +18,14 @@ function submitButton() {
 
 // .ajax method to retrieve and display data from Yelp API
 function getDataFromApi(searchTerm, callback) {
+  displayLoadingMessage();
+  $('.js-search-results').html();
   const settings = {
     url: endPoint,
     data: {
       term: 'restaurant',
       location: `${searchTerm}`,
-      limit: 8,
+      limit: 40,
       attributes: 'hot_and_new'
     },
     dataType: 'json',
@@ -32,19 +34,33 @@ function getDataFromApi(searchTerm, callback) {
   };
 
   $.ajax(settings);
+
 }
 
 //Displays search results on page by calling renderResult() for each returned search item
 function displaySearchData(data) {
   console.log(data.businesses.length);
   if (data.businesses.length === 0) {
-    results ="No restaurants currently available for that zip code"
+    const results = noRestaurantsMessage();
+    $('.js-search-results').prop('hidden', false);
+    $('.js-search-results').html(results);
   }
-  else {
+   else {
     const results = data.businesses.map((item, index) => renderResult(item));
-  }
-  $('.js-search-results').prop('hidden', false);
-  $('.js-search-results').html(results);
+    $('.js-search-results').prop('hidden', false);
+    $('.js-search-results').html(results);
+   }
+}
+
+function noRestaurantsMessage() {
+  return `
+  <p> No restaurants currently available for that zip code</p>
+  `
+}
+function displayLoadingMessage() {
+  const loadMessage = `
+  <div class="loader"></div>`
+  $('.js-search-results').html(loadMessage);
 }
 
 //Renders returned search items
