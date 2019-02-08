@@ -5,7 +5,7 @@ The Trendy Eatz app helps users find and view newly opened trendy restaurants ne
 [Live demo](https://becca529.github.io/New-Restaurant-App/)
 
 ## Screenshot
-![Find New Trendy Restaurants Near You](screenshots/newidea.png "Find New Trendy Restaurants Near You")
+![TrendyEatz Screenshot](https://user-images.githubusercontent.com/29741321/52286149-adf48700-2935-11e9-8af3-b5c7eadfd88e.png))
 
 ## Technologies used
 
@@ -17,4 +17,9 @@ The Trendy Eatz app helps users find and view newly opened trendy restaurants ne
   
 * APIs Used:
   * Yelp Find Business Search
+ 
+* Deep Links Used:
+  * Google Maps
+  * Uber
+
   
